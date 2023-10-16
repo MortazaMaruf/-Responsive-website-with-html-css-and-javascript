@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+    width:100vw; 
+    max-width:1920px;
+}
+
+ i{
+    cursor:pointer;
+ }
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(Images/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+#main ::selection {
+    color: black;
+    background: white;
+}
+
+#navmenus {
+    flex: 1;
+    text-align: right;
+    margin: 8px 0;
+    width: 100%;
+    transition: all ease .4s;
+    height: 65px;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav img {
+    width: 200px;
+    cursor:pointer;
+}
+
+#navmenus ul li {
+    list-style: none;
+    margin-left: 20px;
+    padding: 8px 12px;
+    position: relative;
+    display: inline-block;
+}
+
+#navmenus ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#navmenus ul li::after {
+    content: "";
+    width: 0%;
+    display: block;
+    height: 2px;
+    background: #f44336;
+    margin: auto;
+    transition: all ease 0.5s;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#navmenus ul li:hover::after {
+    width: 100%;
+
+}
+
+#navmenus i {
+    display: none;
+
+}
+
+nav i {
+    display: none;
+
+}
+
+#mainContent {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+#mainContent h1 {
+    font-size: 3vw;
+    text-transform: capitalize;
+}
+
+#mainContent p {
+    line-height: 2rem;
+    margin: 20px;
+    font-size: 1.5vw;
+    text-transform: capitalize;
+    color: white;
+
+}
+
+#btn {
+    height: 50px;
+    width: 180px;
+    position: relative;
+    color: white;
+    border: 2px solid #f44336;
+    background: transparent;
+    border-radius: 50px;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+#btn:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    transition: all ease .8s;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #f44336;
+    z-index: -1;
+}
+
+#btn:hover:before {
+    width: 100%;
+
+
+
+}
+
+#course {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.course-col {
+    flex-basis: 31%;
+    background: #d2baba;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    transition: all ease .5s;
+}
+
+.course-col h3 {
+    padding: 10px 15px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.course-col p {
+    font-size: 14px;
+}
+
+.course-col:hover {
+    box-shadow: 0 0 20px 0px rgb(39, 39, 39);
+}
+
+#campus {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+p {
+    color: #817d7d;
+    text-transform: capitalize;
+    font-size: 18;
+}
+
+.campus-col {
+    flex-basis: 31%;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.campus-col img {
+    width: 100%;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    transition: .5s;
+}
+
+.layer:hover {
+    background: #f4433671;
+}
+
+.layer h3 {
+    text-transform: uppercase;
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    bottom: 0;
+    left: 50%;
+    font-size: 32px;
+    transform: translateX(-50%);
+    position: absolute;
+    transition: all ease .6s;
+
+}
+
+.layer:hover h3 {
+    bottom: 49%;
+
+}
+
+#facilities {
+    text-align: center;
+    width: 90%;
+    padding-top: 100px;
+    margin: auto;
+}
+
+.facilities-col {
+    flex-basis: 31%;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: start;
+}
+
+.facilities-col img {
+    width: 100%;
+}
+
+.facilities-col h3 {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.facilities-col p {
+    font-size: 14px;
+}
+
+#testimonial {
+    text-align: center;
+    width: 90%;
+    padding-top: 100px;
+    margin: auto;
+
+}
+
+.testimonial-col {
+    flex-basis: 44%;
+    padding: 25px;
+    border-radius: 10px;
+    background: #d2baba;
+    text-align: left;
+    margin-bottom: 5%;
+    display: flex;
+    transition: .5s;
+}
+
+.testimonial-col img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 30px;
+    margin-left: 5px;
+}
+
+.testimonialcontent p {
+    padding: 0;
+    margin: 0;
+}
+
+.testimonialcontent h3 {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.testimonialcontent i {
+    color: #f44336;
+}
+
+.testimonial-col:hover {
+    box-shadow: 0 0 20px 0px rgb(39, 39, 39);
+}
+
+#cta {
+    height: 100%;
+    width: 80%;
+    text-align: center;
+    margin: 100px auto;
+    padding: 100px auto;
+    /* background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(Images/banner2.jpg); */
+    background-position: center;
+    background-size:cover;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+#cta h1 {
+    color: black;
+    padding: 40px 0px;
+}
+
+#cta button {
+    margin-bottom: 40px;
+    color: black;
+} 
+
+
+                /* FooTer section   */
+footer {
+    margin:auto;
+    width:90%;
+    text-align :center;
+    padding-top:100px;
+}
+
+footer #icons {
+    color:#f44336;
+    font-size:20px;
+    cursor:pointer;
+}
+footer #icons i {
+    margin:0px 12px;
+    
+}
+footer p{
+    margin:30px 0;
+}
+footer p i {
+    color:#f44336;
+    font-size:20px;
+}
+footer p i:hover,footer #icons i:hover{
+    color:#d2baba;
+    
+}
+            /*-----about page----*/
+
+
+
+   #about-header{
+    margin:auto;
+    text-align:center;
+    width:100%;
+    height:50vh;
+    background-image:linear-gradient(rgba(4, 9, 30, 0.7),
+            rgba(4, 9, 30, 0.7)),url(Images/background.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+   }         
+#about-header h1{
+    margin:100px auto;
+    width:90%;
+    font-size:30px;
+    color:white;
+    
+
+}
+
+
+.about-col{
+    flex-basis:45%;
+    padding:20px 0px;
+    margin-bottom:20px;
+    text-align: left;
+}
+.about-col #btn{
+    color:black;
+    overflow:hidden;
+}
+
+.about-col img{
+    width:100%;
+    border-radius:10px;
+}
+
+
+
+
+
+
+
+@media(max-width: 900px) {
+    
+    body{
+        overflow:hidden;
+       
+    }
+    #mainContent {
+        width: 100%;
+    }
+
+    #mainContent p {
+        width: 95%;
+        margin:auto;
+    }
+
+    nav i {
+        display: block;
+        padding-right: 20px;
+        cursor: pointer;
+        color: white;
+        width: fit-content;
+    }
+
+    nav img {
+        padding: 10px;
+        width: 180px;
+        /* height:500px; */
+
+    }
+
+    #navmenus ul li {
+        display: block;
+
+    }
+
+    #navmenus i {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    #navmenus ul li {
+        padding: 10px;
+    }
+
+    #navmenus {
+        background: #58585880;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -200px;
+        bottom: 0;
+        height: fit-content;
+        width: 150px;
+        z-index: 10;
+        text-align: left;
+        display: block;
+
+
+
+    }
+
+    #mainContent h1 {
+        font-size: 20px;
+    }
+
+    #mainContent p {
+        font-size: 14px;
+        line-height: none;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .testimonial-col img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+        margin-left: 5px;
+    }
+
+    #cta h1 {
+        font-size: 20px;
+    }
+}
